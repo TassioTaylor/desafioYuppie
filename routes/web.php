@@ -21,3 +21,10 @@ Route::post('alunos/create', 'AlunosController@create');
 Route::get('alunos/form-edit/{id}', 'AlunosController@formEdit');
 Route::post('alunos/edit/{id}', 'AlunosController@edit');
 Route::get('alunos/delete/{id}', 'AlunosController@delete');
+
+
+Route::post('import-file', 'ExcelController@importFile')->name('import.file');
+Route::get('import-export-view', 'ExcelController@importExportView')->name('import.export.view');
+
+
+Route::get('produtos','ProdutosController@index');
