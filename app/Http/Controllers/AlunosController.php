@@ -20,8 +20,7 @@ class AlunosController extends Controller
 
     public function create(Request $request){
 
-       $teste = Alunos::create($request->all());
-        dd($teste);
+        Alunos::create($request->all());
         return redirect()->to('alunos');
 
     }

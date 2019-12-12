@@ -6,7 +6,7 @@
         <h1 class="m-0 text-dark">Produtos</h1>
     </div><!-- /.col -->
     </br>
-    <a class="btn btn-primary" href="alunos/form-create">Cadastrar</a>
+    <a class="btn btn-primary" href="produtos/form-create">Cadastrar</a>
     </br>
     <div class="row">
         <div class="col-12">
@@ -30,8 +30,8 @@
                                 <td>{{$produto -> estoque}}</td>
 
                                 <td>
-                                    <a href="{{"/produto/form-edit/{$produto -> id}"}}">Editar</a>
-                                    <a href="{{"/produto/delete/{$produto -> id}"}}">Excluir</a>
+                                    <a href="{{"/produtos/form-edit/{$produto -> id}"}}">Editar</a>
+                                    <a href="{{"/produtos/delete/{$produto -> id}"}}">Excluir</a>
                                 </td>
                             </tr>
                         @endforeach

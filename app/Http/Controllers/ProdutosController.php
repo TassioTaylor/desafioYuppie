@@ -21,7 +21,7 @@ class ProdutosController extends Controller
     public function create(Request $request){
 
         Produto::create($request->all());
-        return redirect()->to('produto');
+        return redirect()->to('produtos');
 
     }
 
@@ -29,7 +29,7 @@ class ProdutosController extends Controller
         $produto = Produto::find($id);
         $produto->delete();
 
-        return redirect()->to('produto');
+        return redirect()->to('produtos');
     }
 
     public function formEdit( $id){
@@ -44,7 +44,7 @@ class ProdutosController extends Controller
         $produto->fill($data);
         $produto->save();
 
-        return redirect()->to('produto');
+        return redirect()->to('produtos');
 
 
     }
