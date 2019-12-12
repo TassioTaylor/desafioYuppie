@@ -1,10 +1,5 @@
 {{ csrf_field() }}
 <div class="card card-primary">
-
-    <div class="card-header">
-        <h3 class="card-title">Quick Example</h3>
-    </div>
-
     <div class="form-group">
         <label for="name">Nome</label>
         <input type="text" class="form-control" id="nome" name="nome" value="{{$aluno->nome}}">
@@ -39,5 +34,4 @@
         <label for="uf">UF</label>
         <input type="text" class="form-control" id="uf" name="uf" value="{{$aluno->UF}}">
     </div>
-
 </div>
