@@ -6,7 +6,7 @@
         <h1 class="m-0 text-dark">Alunos</h1>
     </div><!-- /.col -->
     </br>
-        <a class="btn btn-primary" href="alunos/form-create">Cadastrar</a>
+        <a class="btn btn-primary" href="/alunos/form-create">Cadastrar</a>
     </br>
 <div class="row">
     <div class="col-12">
@@ -18,6 +18,7 @@
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Data Nasc.</th>
+                        <th>Turma</th>
                         <th>Ações</th>
                     </tr>
                     <tbody>
@@ -26,6 +27,7 @@
                             <td>{{$aluno -> id}}</td>
                             <td>{{$aluno -> nome}}</td>
                             <td>{{$aluno -> data_nascimento}}</td>
+                            <td>{{$aluno -> turma($aluno->turma_id)}}</td>
 
                             <td>
                                 <a href="{{"/alunos/form-edit/{$aluno -> id}"}}">Editar</a>

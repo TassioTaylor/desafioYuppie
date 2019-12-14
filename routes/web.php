@@ -23,9 +23,8 @@ Route::post('alunos/edit/{id}', 'AlunosController@edit');
 Route::get('alunos/delete/{id}', 'AlunosController@delete');
 
 
-Route::post('import-file', 'ExcelController@importFile')->name('import.file');
-Route::get('import-export-view', 'ExcelController@importExportView')->name('import.export.view');
-
+Route::get('/import_excel', 'ImportController@index');
+Route::post('/import_excel/import', 'ImportController@import');
 
 Route::get('produtos','ProdutosController@index');
 Route::get('produtos/form-create', 'ProdutosController@formcreate');

@@ -3,18 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Alunos;
+use App\Turma;
 use Illuminate\Http\Request;
 
 class AlunosController extends Controller
 {
     public function index(){
         $alunos = Alunos::all();
-        return view('alunos.alunos',compact('alunos'));
+        $turmas = Turma::all();
+
+        return view('alunos.alunos',compact('alunos','turmas'));
     }
 
     public function formCreate(){
 
-        return view('alunos.create' , ['aluno' => new Alunos()]);
+        $turmas = Turma::pluck('id','nome');
+        return view('alunos.create' , ['aluno' => new Alunos()], compact('turmas'));
 
     }
 
@@ -34,7 +38,9 @@ class AlunosController extends Controller
 
     public function formEdit( $id){
         $aluno = Alunos::find($id);
-        return view('alunos.edit', compact('aluno'));
+        $turmas = Turma::pluck('id','nome');
+
+        return view('alunos.edit', compact('aluno','turmas'));
     }
 
     public function edit(Request $request, $id){

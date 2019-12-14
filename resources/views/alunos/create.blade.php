@@ -5,6 +5,7 @@
 
         {{ csrf_field() }}
         @include('alunos._form')
+
         <button type="submit" class="btn btn-default">Enviar</button>
 
     </form>

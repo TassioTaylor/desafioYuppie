@@ -13,6 +13,12 @@ class Alunos extends Model
         'endereco',
         'bairro',
         'cidade',
-        'uf'
+        'uf',
+        'turma_id'
     ];
+
+    public function turma($id)
+    {
+        return $turma = Turma::find($id)->nome;
+    }
 }
