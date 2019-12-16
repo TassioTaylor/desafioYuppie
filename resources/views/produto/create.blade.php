@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+
+@include('errors')
+
     <form method="POST" action="/produtos/create">
 
         {{ csrf_field() }}

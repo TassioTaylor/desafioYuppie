@@ -9,7 +9,7 @@
     <div class="form-inline ">
     <a class="btn btn-primary" href="/produtos/form-create">Cadastrar</a>
        <div class="col" style="float: right ">
-        <form class="form-row" action="{{ 'import_excel/import' }}" method="POST" enctype="multipart/form-data">
+        <form class="form-row" action="{{ '/import_excel/import' }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="file" style="text-align:right"  size="50" width="10px" name="file" class="form-control">
 

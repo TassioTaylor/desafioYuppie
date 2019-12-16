@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     <div class="col-sm-6">
         <h1 class="m-0 text-dark">Alunos</h1>
     </div><!-- /.col -->

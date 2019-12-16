@@ -20,6 +20,7 @@ class ProdutosController extends Controller
 
     public function create(Request $request){
 
+        $this->_validate($request);
         Produto::create($request->all());
         return redirect()->to('produtos');
 
@@ -39,6 +40,7 @@ class ProdutosController extends Controller
 
     public function edit(Request $request, $id){
 
+        $this->_validate($request);
         $produto = Produto::findOrfail($id);
         $data = $request->all();
         $produto->fill($data);
@@ -47,5 +49,14 @@ class ProdutosController extends Controller
         return redirect()->to('produtos');
 
 
+    }
+
+    protected function _validate(Request $request)
+    {
+        $this->validate($request, [
+            'nome' => 'required',
+            'preco' => 'required',
+            'estoque' => 'required'
+        ]);
     }
 }

@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+
+@include('errors')
+
     <form method="POST" action="{{ "/produtos/edit/{$produto->id}" }}">
 
         {{ csrf_field() }}
